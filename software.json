@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Mi Aplicación 1",
+        "description": "Descripción de tu primera aplicación. Edita este archivo JSON para agregar tus propios software.",
+        "version": "1.0.0",
+        "size": "45 MB",
+        "icon": "🚀",
+        "downloadUrl": "https://github.com/serskynet/web-software-store/releases/download/v1.0/app1.zip"
+    },
+    {
+        "id": 2,
+        "name": "Mi Herramienta 2",
+        "description": "Tu segunda herramienta o aplicación. Reemplaza los datos con tus propios software.",
+        "version": "2.1.5",
+        "size": "32 MB",
+        "icon": "🛠️",
+        "downloadUrl": "https://github.com/serskynet/web-software-store/releases/download/v2.1.5/tool2.zip"
+    },
+    {
+        "id": 3,
+        "name": "Software 3",
+        "description": "Tu tercera aplicación. Puedes agregar más software duplicando este objeto.",
+        "version": "3.0.2",
+        "size": "78 MB",
+        "icon": "⚙️",
+        "downloadUrl": "https://github.com/serskynet/web-software-store/releases/download/v3.0.2/software3.zip"
+    }
+]
