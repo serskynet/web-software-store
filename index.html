@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portal profesional de descargas de software">
-    <meta name="theme-color" content="#0f172a">
-    <title>Software Store | Descargas Profesionales</title>
+    <meta name="description" content="SoftHub - Plataforma Enterprise de Distribución de Software. Soluciones empresariales confiables.">
+    <meta name="keywords" content="software, distribución, enterprise, descargas, business">
+    <meta name="theme-color" content="#0a0e27">
+    <title>SoftHub - Enterprise Software Distribution Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,113 +17,296 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
-                <span>SoftHub</span>
+                <div class="logo-mark">S</div>
+                <div>
+                    <div class="logo-text">SoftHub</div>
+                    <div class="logo-subtitle">Enterprise</div>
+                </div>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Inicio</a></li>
-                <li><a href="#software" class="nav-link">Software</a></li>
-                <li><a href="#features" class="nav-link">Características</a></li>
-                <li><a href="#contact" class="nav-link">Contacto</a></li>
+                <li><a href="#home" class="nav-link active">Platform</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="nav-right">
+                <a href="#contact" class="btn-nav">Get Started</a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">Descarga Software Profesional</h1>
-                <p class="hero-subtitle">Acceso seguro y rápido a todas nuestras aplicaciones</p>
-                <a href="#software" class="btn btn-primary btn-lg">
-                    <span>Explorar Software</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </a>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">Trusted by Enterprise</div>
+                <h1 class="hero-title">Enterprise-Grade Software Distribution Platform</h1>
+                <p class="hero-description">Deliver, manage, and scale your software solutions with confidence. Built for businesses that demand reliability, security, and performance.</p>
+                <div class="hero-cta">
+                    <a href="#products" class="btn btn-primary btn-large">
+                        <span>Explore Solutions</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary btn-large">
+                        <span>Request Demo</span>
+                    </a>
+                </div>
+                <div class="hero-metrics">
+                    <div class="metric">
+                        <div class="metric-value">500K+</div>
+                        <div class="metric-label">Downloads</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">98.9%</div>
+                        <div class="metric-label">Uptime</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">150+</div>
+                        <div class="metric-label">Enterprises</div>
+                    </div>
+                </div>
             </div>
             <div class="hero-visual">
-                <div class="floating-card card-1">
-                    <div class="card-icon">⚡</div>
-                    <div class="card-text">Rápido</div>
-                </div>
-                <div class="floating-card card-2">
-                    <div class="card-icon">🔒</div>
-                    <div class="card-text">Seguro</div>
-                </div>
-                <div class="floating-card card-3">
-                    <div class="card-icon">📦</div>
-                    <div class="card-text">Ligero</div>
+                <div class="visual-container">
+                    <div class="visual-card visual-primary">
+                        <div class="card-header">Distribution Network</div>
+                        <div class="card-body">
+                            <div class="stat-line">Global CDN Coverage</div>
+                            <div class="stat-bar"><div class="bar-fill" style="width: 94%"></div></div>
+                            <div class="stat-line mt-2">99.99% SLA</div>
+                            <div class="stat-bar"><div class="bar-fill" style="width: 100%"></div></div>
+                        </div>
+                    </div>
+                    <div class="visual-card visual-secondary">
+                        <div class="card-header">Security Status</div>
+                        <div class="card-body">
+                            <div class="status-badge status-ok">✓ SSL/TLS Encrypted</div>
+                            <div class="status-badge status-ok">✓ End-to-End</div>
+                            <div class="status-badge status-ok">✓ Zero Trust</div>
+                        </div>
+                    </div>
+                    <div class="visual-card visual-accent">
+                        <div class="card-header">Performance</div>
+                        <div class="card-body">
+                            <div class="perf-metric">
+                                <span>Avg. Download</span>
+                                <strong>2.3s</strong>
+                            </div>
+                            <div class="perf-metric">
+                                <span>API Response</span>
+                                <strong>145ms</strong>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
+    <!-- Stats Section -->
+    <section class="stats-section">
         <div class="container">
-            <h2 class="section-title">Por qué elegirnos</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
-                        </svg>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-content">
+                        <div class="stat-number">99.99%</div>
+                        <div class="stat-text">Platform Availability</div>
                     </div>
-                    <h3>Interfaz Intuitiva</h3>
-                    <p>Diseño moderno y fácil de usar para encontrar y descargar tu software</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
+                <div class="stat-item">
+                    <div class="stat-icon">🔒</div>
+                    <div class="stat-content">
+                        <div class="stat-number">Enterprise Security</div>
+                        <div class="stat-text">SOC 2 Type II Certified</div>
                     </div>
-                    <h3>100% Seguro</h3>
-                    <p>Todos nuestros archivos están verificados y libres de malware</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
-                            <polyline points="13 2 13 9 20 9"/>
-                        </svg>
+                <div class="stat-item">
+                    <div class="stat-icon">🌍</div>
+                    <div class="stat-content">
+                        <div class="stat-number">Global Infrastructure</div>
+                        <div class="stat-text">45+ Data Centers</div>
                     </div>
-                    <h3>Actualizaciones</h3>
-                    <p>Acceso a las versiones más recientes de todas las aplicaciones</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="1"/>
-                            <circle cx="19" cy="12" r="1"/>
-                            <circle cx="5" cy="12" r="1"/>
-                        </svg>
+                <div class="stat-item">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-content">
+                        <div class="stat-number">24/7 Support</div>
+                        <div class="stat-text">Enterprise SLA</div>
                     </div>
-                    <h3>Soporte 24/7</h3>
-                    <p>Asistencia técnica disponible para resolver tus dudas</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Software Section -->
-    <section class="software-section" id="software">
+    <!-- Solutions Section -->
+    <section class="solutions" id="solutions">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Nuestro Catálogo</h2>
-                <div class="search-bar">
-                    <input type="text" id="searchInput" placeholder="Buscar software..." class="search-input">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.35-4.35"></path>
-                    </svg>
+                <h2 class="section-title">Enterprise Solutions</h2>
+                <p class="section-subtitle">Comprehensive distribution, management, and deployment solutions for modern enterprises</p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">🔄</div>
+                    <h3>Continuous Deployment</h3>
+                    <p>Automated release pipelines with zero-downtime deployments. CI/CD integration with all major platforms.</p>
+                    <ul class="features-list">
+                        <li>Automated rollbacks</li>
+                        <li>Staged deployments</li>
+                        <li>Version control</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">🛡️</div>
+                    <h3>Advanced Security</h3>
+                    <p>Multi-layer security architecture with encryption, threat detection, and compliance management.</p>
+                    <ul class="features-list">
+                        <li>End-to-end encryption</li>
+                        <li>DLP & SIEM integration</li>
+                        <li>Audit trails</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">📊</div>
+                    <h3>Analytics & Insights</h3>
+                    <p>Real-time analytics dashboard with detailed insights into downloads, usage patterns, and user behavior.</p>
+                    <ul class="features-list">
+                        <li>Real-time dashboards</li>
+                        <li>Custom reports</li>
+                        <li>Predictive analytics</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">🌐</div>
+                    <h3>Global Delivery</h3>
+                    <p>Content Delivery Network with edge caching and intelligent routing for maximum performance worldwide.</p>
+                    <ul class="features-list">
+                        <li>Smart routing</li>
+                        <li>Edge caching</li>
+                        <li>Geo-replication</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">🔗</div>
+                    <h3>API Integration</h3>
+                    <p>RESTful API and webhooks for seamless integration with your existing enterprise systems and workflows.</p>
+                    <ul class="features-list">
+                        <li>REST/GraphQL APIs</li>
+                        <li>Webhooks</li>
+                        <li>SDK support</li>
+                    </ul>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">👥</div>
+                    <h3>Team Collaboration</h3>
+                    <p>Role-based access control with comprehensive permission management for teams and organizations.</p>
+                    <ul class="features-list">
+                        <li>RBAC system</li>
+                        <li>Team management</li>
+                        <li>Activity logs</li>
+                    </ul>
                 </div>
             </div>
-            <div class="software-grid" id="softwareGrid">
-                <!-- Software cards will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Product Catalog</h2>
+                <p class="section-subtitle">Search and discover enterprise software solutions</p>
+                <div class="search-container">
+                    <div class="search-box">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+                        <input type="text" id="searchInput" placeholder="Search products, categories, features..." class="search-input">
+                    </div>
+                    <div class="filter-tags">
+                        <span class="tag-filter" onclick="filterByCategory('all')">All</span>
+                        <span class="tag-filter" onclick="filterByCategory('Development')">Development</span>
+                        <span class="tag-filter" onclick="filterByCategory('Infrastructure')">Infrastructure</span>
+                        <span class="tag-filter" onclick="filterByCategory('Analytics')">Analytics</span>
+                        <span class="tag-filter" onclick="filterByCategory('Security')">Security</span>
+                    </div>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About SoftHub</h2>
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>Enterprise-First Platform</h3>
+                    <p>SoftHub was built from the ground up for enterprise requirements. We understand the complexity of managing software distribution at scale, with compliance, security, and reliability as top priorities.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-check">✓</div>
+                            <span>Founded 2018</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-check">✓</div>
+                            <span>50+ Team Members</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-check">✓</div>
+                            <span>ISO 27001 Certified</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-check">✓</div>
+                            <span>Global Presence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-showcase">
+                    <div class="showcase-box">
+                        <div class="showcase-header">Our Values</div>
+                        <div class="values-list">
+                            <div class="value-item">
+                                <span class="value-title">Reliability</span>
+                                <span class="value-desc">99.99% SLA guaranteed</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-title">Security</span>
+                                <span class="value-desc">Enterprise-grade protection</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-title">Performance</span>
+                                <span class="value-desc">Sub-second response times</span>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-title">Support</span>
+                                <span class="value-desc">Dedicated support teams</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Ready for Enterprise Distribution?</h2>
+                <p>Get in touch with our sales team to discuss your software distribution needs and find the perfect solution for your organization.</p>
+                <div class="contact-actions">
+                    <a href="mailto:sales@softhub.io" class="btn btn-primary btn-large">
+                        <span>Contact Sales</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </a>
+                    <a href="#" class="btn btn-secondary btn-large">
+                        <span>Schedule Demo</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -130,44 +314,58 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+            <div class="footer-grid">
+                <div class="footer-col">
                     <h4>SoftHub</h4>
-                    <p>Tu plataforma profesional de descargas de software</p>
+                    <p class="footer-desc">Enterprise software distribution platform for businesses of all sizes.</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Compliance</a>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Enlaces</h4>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Descargas</a></li>
-                        <li><a href="#">Soporte</a></li>
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Documentation</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Información</h4>
-                    <ul>
-                        <li><a href="#">Privacidad</a></li>
-                        <li><a href="#">Términos</a></li>
-                        <li><a href="#">Contacto</a></li>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-list">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">API Docs</a></li>
+                        <li><a href="#">Status</a></li>
+                        <li><a href="#">Community</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 SoftHub. Todos los derechos reservados.</p>
+                <p>&copy; 2026 SoftHub. All rights reserved. Enterprise Distribution Platform.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Modal -->
-    <div class="modal" id="modal">
-        <div class="modal-content">
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content-wrapper">
             <button class="modal-close" onclick="closeModal()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
-            <div id="modalBody"></div>
+            <div class="modal-content" id="modalContent"></div>
         </div>
     </div>
 

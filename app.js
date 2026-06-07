@@ -1,29 +1,28 @@
-// Global state
-let allSoftware = [];
-let filteredSoftware = [];
+let allProducts = [];
+let filteredProducts = [];
+let currentFilter = 'all';
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    loadSoftware();
+    loadProducts();
     setupEventListeners();
     setupNavigation();
 });
 
-// Setup event listeners
 function setupEventListeners() {
     const searchInput = document.getElementById('searchInput');
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase();
-            filterSoftware(query);
+            searchProducts(query);
         });
     }
 
     // Close modal on background click
-    const modal = document.getElementById('modal');
+    const modal = document.getElementById('productModal');
     if (modal) {
         modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
+            if (e.target === modal || e.target.classList.contains('modal-overlay')) {
                 closeModal();
             }
         });
@@ -37,7 +36,6 @@ function setupEventListeners() {
     });
 }
 
-// Setup navigation
 function setupNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
@@ -66,99 +64,132 @@ function setupNavigation() {
     });
 }
 
-// Load software from JSON
-async function loadSoftware() {
+async function loadProducts() {
     try {
-        const response = await fetch('software.json');
-        if (!response.ok) throw new Error('Error loading software.json');
-        allSoftware = await response.json();
-        filteredSoftware = [...allSoftware];
-        renderSoftware();
+        const response = await fetch('products.json');
+        if (!response.ok) throw new Error('Error loading products.json');
+        allProducts = await response.json();
+        filteredProducts = [...allProducts];
+        renderProducts();
     } catch (error) {
         console.error('Error:', error);
         showEmptyState();
     }
 }
 
-// Filter software
-function filterSoftware(query) {
-    filteredSoftware = allSoftware.filter(software => {
-        return (
-            software.name.toLowerCase().includes(query) ||
-            software.description.toLowerCase().includes(query) ||
-            software.category?.toLowerCase().includes(query)
-        );
-    });
-    renderSoftware();
+function filterByCategory(category) {
+    currentFilter = category;
+    
+    const filters = document.querySelectorAll('.tag-filter');
+    filters.forEach(f => f.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    if (category === 'all') {
+        filteredProducts = [...allProducts];
+    } else {
+        filteredProducts = allProducts.filter(p => p.category === category);
+    }
+    
+    renderProducts();
 }
 
-// Render software grid
-function renderSoftware() {
-    const grid = document.getElementById('softwareGrid');
+function searchProducts(query) {
+    if (query === '') {
+        if (currentFilter === 'all') {
+            filteredProducts = [...allProducts];
+        } else {
+            filteredProducts = allProducts.filter(p => p.category === currentFilter);
+        }
+    } else {
+        filteredProducts = allProducts.filter(product => {
+            return (
+                product.name.toLowerCase().includes(query) ||
+                product.description.toLowerCase().includes(query) ||
+                product.category.toLowerCase().includes(query) ||
+                (product.tags && product.tags.some(tag => tag.toLowerCase().includes(query)))
+            );
+        });
+    }
+    renderProducts();
+}
+
+function renderProducts() {
+    const grid = document.getElementById('productsGrid');
     if (!grid) return;
 
-    if (filteredSoftware.length === 0) {
+    if (filteredProducts.length === 0) {
         grid.innerHTML = `
             <div style="grid-column: 1/-1; text-align: center; padding: 4rem 0;">
-                <p style="color: var(--gray-500); font-size: 1.1rem;">No se encontraron resultados</p>
+                <p style="color: var(--text-tertiary); font-size: 1rem;">No products found. Please try another search.</p>
             </div>
         `;
         return;
     }
 
-    grid.innerHTML = filteredSoftware.map(software => `
-        <div class="software-card">
-            <div class="software-header">
-                <div class="software-icon">${software.icon || '💻'}</div>
-                <div class="software-header-text">
-                    <h3>${escapeHtml(software.name)}</h3>
-                    <span class="version">v${software.version}</span>
+    grid.innerHTML = filteredProducts.map(product => `
+        <div class="product-card">
+            <div class="product-header">
+                <div>
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem;">
+                        <div class="product-icon">${product.icon}</div>
+                        <div class="product-header-text">
+                            <h3>${escapeHtml(product.name)}</h3>
+                            <div class="version">v${product.version}</div>
+                        </div>
+                    </div>
                 </div>
+                <div class="product-badge">${product.category}</div>
             </div>
-            <div class="software-body">
-                <p class="software-description">${escapeHtml(software.description)}</p>
-                <div class="software-meta">
-                    <span>${software.category || 'General'}</span>
-                    <span>${software.size || 'N/A'}</span>
+            <div class="product-body">
+                <p class="product-description">${escapeHtml(product.description)}</p>
+                <div class="product-specs">
+                    <div class="spec">
+                        <div class="spec-label">Size</div>
+                        <div class="spec-value">${product.size}</div>
+                    </div>
+                    <div class="spec">
+                        <div class="spec-label">Downloads</div>
+                        <div class="spec-value">${product.downloads}</div>
+                    </div>
                 </div>
-                <button class="download-btn" onclick="openModal('${escapeHtml(software.name)}', '${escapeHtml(software.description)}', '${software.downloadUrl}', '${software.version}', '${software.size || 'N/A'}', '${software.icon || '💻'}', '${software.category || 'General'}')">
-                    Descargar Ahora
-                </button>
+                <div class="product-actions">
+                    <button class="btn-download" onclick="openModal('${escapeHtml(product.name)}', '${escapeHtml(product.description)}', '${product.url}', '${product.version}', '${product.size}', '${product.icon}', '${product.category}')">Download</button>
+                    <button class="btn-info" onclick="openModal('${escapeHtml(product.name)}', '${escapeHtml(product.description)}', '${product.url}', '${product.version}', '${product.size}', '${product.icon}', '${product.category}')">Details</button>
+                </div>
             </div>
         </div>
     `).join('');
 }
 
-// Open modal
 function openModal(name, description, url, version, size, icon, category) {
-    const modal = document.getElementById('modal');
-    const modalBody = document.getElementById('modalBody');
+    const modal = document.getElementById('productModal');
+    const modalContent = document.getElementById('modalContent');
 
-    modalBody.innerHTML = `
+    modalContent.innerHTML = `
         <div class="modal-header">
             <div class="modal-icon">${icon}</div>
-            <div class="modal-header-text">
-                <h2>${name}</h2>
-                <p>${category}</p>
+            <div>
+                <div class="modal-category">${category}</div>
+                <div class="modal-title">${name}</div>
             </div>
         </div>
         <p class="modal-description">${description}</p>
-        <div class="modal-info">
-            <div class="info-item">
-                <label>Versión</label>
-                <span>${version}</span>
+        <div class="modal-specs">
+            <div class="modal-spec">
+                <div class="modal-spec-label">Version</div>
+                <div class="modal-spec-value">${version}</div>
             </div>
-            <div class="info-item">
-                <label>Tamaño</label>
-                <span>${size}</span>
+            <div class="modal-spec">
+                <div class="modal-spec-label">File Size</div>
+                <div class="modal-spec-value">${size}</div>
             </div>
         </div>
         <div class="modal-footer">
             <a href="${url}" download class="btn btn-primary" style="flex: 1;">
-                Descargar
+                Download Now
             </a>
             <button onclick="closeModal()" class="btn btn-secondary" style="flex: 1;">
-                Cancelar
+                Close
             </button>
         </div>
     `;
@@ -166,15 +197,13 @@ function openModal(name, description, url, version, size, icon, category) {
     modal.classList.add('active');
 }
 
-// Close modal
 function closeModal() {
-    const modal = document.getElementById('modal');
+    const modal = document.getElementById('productModal');
     if (modal) {
         modal.classList.remove('active');
     }
 }
 
-// Escape HTML
 function escapeHtml(text) {
     const map = {
         '&': '&amp;',
@@ -186,13 +215,12 @@ function escapeHtml(text) {
     return String(text).replace(/[&<>"']/g, m => map[m]);
 }
 
-// Show empty state
 function showEmptyState() {
-    const grid = document.getElementById('softwareGrid');
+    const grid = document.getElementById('productsGrid');
     if (grid) {
         grid.innerHTML = `
             <div style="grid-column: 1/-1; text-align: center; padding: 4rem 0;">
-                <p style="color: var(--gray-500); font-size: 1.1rem;">Error al cargar el software. Por favor, intenta más tarde.</p>
+                <p style="color: var(--text-tertiary); font-size: 1rem;">Error loading products. Please try again later.</p>
             </div>
         `;
     }

@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "name": "CodeVault Pro",
+        "description": "Enterprise-grade source code management and version control platform. Supports distributed workflows, advanced merge strategies, and enterprise authentication.",
+        "category": "Development",
+        "version": "4.2.1",
+        "size": "425 MB",
+        "downloads": "45K",
+        "icon": "💻",
+        "url": "https://github.com/serskynet/web-software-store/releases/download/v1.0/codevault-pro.zip",
+        "tags": ["VCS", "Git", "Development", "Team Collaboration"]
+    },
+    {
+        "id": 2,
+        "name": "DataFlow Analytics",
+        "description": "Real-time data processing and analytics platform. Process terabytes of data with sub-second latency. Includes machine learning pipelines and advanced visualization.",
+        "category": "Analytics",
+        "version": "3.5.2",
+        "size": "1.2 GB",
+        "downloads": "28K",
+        "icon": "📊",
+        "url": "https://github.com/serskynet/web-software-store/releases/download/v1.0/dataflow-analytics.zip",
+        "tags": ["Big Data", "ML", "Real-time", "Analytics"]
+    },
+    {
+        "id": 3,
+        "name": "SecureVault Enterprise",
+        "description": "Comprehensive security and encryption suite. End-to-end encryption, threat detection, vulnerability scanning, and compliance management for enterprises.",
+        "category": "Security",
+        "version": "5.1.0",
+        "size": "156 MB",
+        "downloads": "62K",
+        "icon": "🔒",
+        "url": "https://github.com/serskynet/web-software-store/releases/download/v1.0/securevault-enterprise.zip",
+        "tags": ["Security", "Encryption", "Compliance", "Threat Detection"]
+    },
+    {
+        "id": 4,
+        "name": "CloudSync Platform",
+        "description": "Multi-cloud orchestration and synchronization platform. Manage infrastructure across AWS, Azure, GCP with automated failover and disaster recovery.",
+        "category": "Infrastructure",
+        "version": "2.8.3",
+        "size": "287 MB",
+        "downloads": "19K",
+        "icon": "☁️",
+        "url": "https://github.com/serskynet/web-software-store/releases/download/v1.0/cloudsync-platform.zip",
+        "tags": ["Cloud", "DevOps", "Orchestration", "Infrastructure"]
+    },
+    {
+        "id": 5,
+        "name": "APIGateway Pro",
+        "description": "High-performance API management gateway. Rate limiting, authentication, request/response transformation, and detailed analytics for API ecosystems.",
+        "category": "Development",
+        "version": "3.9.4",
+        "size": "189 MB",
+        "downloads": "53K",
+        "icon": "🔗",
+        "url": "https://github.com/serskynet/web-software-store/releases/download/v1.0/apigateway-pro.zip",
+        "tags": ["API", "Microservices", "Gateway", "Development"]
+    },
+    {
+        "id": 6,
+        "name": "MonitorHub Advanced",
+        "description": "Enterprise monitoring and observability platform. Real-time metrics, distributed tracing, log aggregation, and intelligent alerting for infrastructure and applications.",
+        "category": "Infrastructure",
+        "version": "4.6.2",
+        "size": "567 MB",
+        "downloads": "38K",
+        "icon": "📡",
+        "url": "https://github.com/serskynet/web-software-store/releases/download/v1.0/monitorhub-advanced.zip",
+        "tags": ["Monitoring", "Observability", "Analytics", "Infrastructure"]
+    },
+    {
+        "id": 7,
+        "name": "AI Studio Enterprise",
+        "description": "Complete machine learning platform. Model training, deployment, and management. GPU acceleration, distributed training, and production ML pipelines.",
+        "category": "Analytics",
+        "version": "2.3.1",
+        "size": "2.4 GB",
+        "downloads": "15K",
+        "icon": "🤖",
+        "url": "https://github.com/serskynet/web-software-store/releases/download/v1.0/ai-studio-enterprise.zip",
+        "tags": ["AI", "ML", "Deep Learning", "Analytics"]
+    },
+    {
+        "id": 8,
+        "name": "ContainerHub Pro",
+        "description": "Container registry and orchestration platform. Support for Docker, Kubernetes, and other container technologies with advanced networking and storage solutions.",
+        "category": "Infrastructure",
+        "version": "3.1.5",
+        "size": "345 MB",
+        "downloads": "41K",
+        "icon": "📦",
+        "url": "https://github.com/serskynet/web-software-store/releases/download/v1.0/containerhub-pro.zip",
+        "tags": ["Containers", "Docker", "Kubernetes", "Infrastructure"]
+    },
+    {
+        "id": 9,
+        "name": "IdentityFlow Suite",
+        "description": "Enterprise identity and access management. Multi-factor authentication, single sign-on, role-based access control, and compliance audit trails.",
+        "category": "Security",
+        "version": "4.0.2",
+        "size": "278 MB",
+        "downloads": "35K",
+        "icon": "👤",
+        "url": "https://github.com/serskynet/web-software-store/releases/download/v1.0/identityflow-suite.zip",
+        "tags": ["IAM", "Authentication", "Security", "Compliance"]
+    }
+]
