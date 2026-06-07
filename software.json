@@ -1,29 +1,62 @@
 [
     {
         "id": 1,
-        "name": "Mi Aplicación 1",
-        "description": "Descripción de tu primera aplicación. Edita este archivo JSON para agregar tus propios software.",
-        "version": "1.0.0",
-        "size": "45 MB",
-        "icon": "🚀",
-        "downloadUrl": "https://github.com/serskynet/web-software-store/releases/download/v1.0/app1.zip"
+        "name": "Pro Editor",
+        "description": "Editor de código avanzado con soporte para más de 100 lenguajes de programación. Incluye temas profesionales, autocompletado inteligente y depuración integrada.",
+        "version": "2.5.3",
+        "size": "156 MB",
+        "category": "Desarrollo",
+        "icon": "📝",
+        "downloadUrl": "https://github.com/serskynet/web-software-store/releases/download/v1.0/pro-editor.zip"
     },
     {
         "id": 2,
-        "name": "Mi Herramienta 2",
-        "description": "Tu segunda herramienta o aplicación. Reemplaza los datos con tus propios software.",
-        "version": "2.1.5",
-        "size": "32 MB",
-        "icon": "🛠️",
-        "downloadUrl": "https://github.com/serskynet/web-software-store/releases/download/v2.1.5/tool2.zip"
+        "name": "Design Suite",
+        "description": "Herramienta profesional de diseño gráfico con interfaz intuitiva. Perfecta para crear logotipos, banners y materiales de marketing de alta calidad.",
+        "version": "1.8.9",
+        "size": "234 MB",
+        "category": "Diseño",
+        "icon": "🎨",
+        "downloadUrl": "https://github.com/serskynet/web-software-store/releases/download/v1.0/design-suite.zip"
     },
     {
         "id": 3,
-        "name": "Software 3",
-        "description": "Tu tercera aplicación. Puedes agregar más software duplicando este objeto.",
-        "version": "3.0.2",
-        "size": "78 MB",
-        "icon": "⚙️",
-        "downloadUrl": "https://github.com/serskynet/web-software-store/releases/download/v3.0.2/software3.zip"
+        "name": "Video Master",
+        "description": "Software de edición de video profesional con efectos avanzados, transiciones fluidas y soporte para 4K. Ideal para creadores de contenido.",
+        "version": "3.1.2",
+        "size": "512 MB",
+        "category": "Multimedia",
+        "icon": "🎬",
+        "downloadUrl": "https://github.com/serskynet/web-software-store/releases/download/v1.0/video-master.zip"
+    },
+    {
+        "id": 4,
+        "name": "Cloud Manager",
+        "description": "Gestor de almacenamiento en la nube con sincronización automática y encriptación end-to-end. Seguridad de nivel empresarial.",
+        "version": "2.0.1",
+        "size": "89 MB",
+        "category": "Utilidades",
+        "icon": "☁️",
+        "downloadUrl": "https://github.com/serskynet/web-software-store/releases/download/v1.0/cloud-manager.zip"
+    },
+    {
+        "id": 5,
+        "name": "Analytics Pro",
+        "description": "Plataforma de análisis de datos en tiempo real. Crea gráficos personalizados, reportes automáticos y visualizaciones interactivas.",
+        "version": "4.2.0",
+        "size": "178 MB",
+        "category": "Análisis",
+        "icon": "📊",
+        "downloadUrl": "https://github.com/serskynet/web-software-store/releases/download/v1.0/analytics-pro.zip"
+    },
+    {
+        "id": 6,
+        "name": "Security Guard",
+        "description": "Suite completa de seguridad con antivirus, firewall y protección contra malware. Monitoreo 24/7 de tu sistema.",
+        "version": "5.3.7",
+        "size": "267 MB",
+        "category": "Seguridad",
+        "icon": "🔒",
+        "downloadUrl": "https://github.com/serskynet/web-software-store/releases/download/v1.0/security-guard.zip"
     }
 ]
