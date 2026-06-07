@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Software - Descargas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📥 Mis Software</h1>
+            <p class="subtitle">Descarga mis aplicaciones y herramientas</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="software-grid" id="softwareGrid">
+                <!-- Los software se cargarán aquí desde software.json -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mis Software. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal para detalles del software -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
